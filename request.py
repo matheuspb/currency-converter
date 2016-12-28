@@ -1,12 +1,16 @@
-#!/usr/bin/env python
+import urllib.request
+from json import loads
 
-import urllib.request, json
-from sys import argv
+from ui import currencies
 
-response = urllib.request.urlopen(
-        "http://api.fixer.io/latest?base=" + argv[1] +
-        "&symbols=" + argv[2])
+def get_rate(base, currency):
+    if not base in currencies or not currency in currencies:
+        raise KeyError("Currency not available")
 
-rates = json.loads(response.read().decode("utf-8"))
+    response = urllib.request.urlopen(
+            "http://api.fixer.io/latest?base=" + base +
+            "&symbols=" + currency)
 
-print(rates)
+    response_dict = loads(response.read().decode("utf-8")) # parses json
+
+    return response_dict["rates"][currency]

@@ -14,11 +14,11 @@ if __name__ == "__main__":
             print_currencies()
         else:
             try:
-                rate = get_rate(argv[1], argv[2])
+                rate = get_rate(argv[2], argv[3])
             except KeyError:
                 print("Currency not available, type '" + argv[0] + " -l' to " +
                         "get a list of the available currencies")
             else:
-                print_rate(rate, argv[1], argv[2])
+                print_rate(float(argv[1]), rate, argv[2], argv[3])
     except IndexError:
         print("Type '" + argv[0] + " --help' to know how to use it")

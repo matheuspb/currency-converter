@@ -33,15 +33,15 @@ currencies = {
     "ZAR": "South African rand"
 }
 
-def print_rate(rate, base, currency):
-    print("1 " + currencies[base] + " = " + str(rate) + " " +
+def print_rate(value, rate, base, currency):
+    print(str(value) + " " + currencies[base] + " = " + str(rate*value) + " " +
             currencies[currency])
 
 def print_help(cmd):
     print(
-        "\n" + cmd + " USD BRL\n" +\
-        "This converts from US dollars to Brazilian Reals\n\n" +\
-        "'" + cmd + " -l' -> Shows all available currencies\n")
+        "Example: '" + cmd + " 20 USD BRL'\n" +\
+        "This converts 20 US dollars to Brazilian reals\n\n" +\
+        "Type '" + cmd + " -l' to get all available currencies")
 
 def print_currencies():
     print("Available currencies:\n")

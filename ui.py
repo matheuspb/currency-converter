@@ -1,7 +1,7 @@
 currencies = {
     "AUD": "Australian dollar",
     "BGN": "Bulgarian lev",
-    "BRL": "Brasilian real",
+    "BRL": "Brazilian real",
     "CAD": "Canadian dollar",
     "CHF": "Swiss franc",
     "CNY": "Chinese yuan",
@@ -39,8 +39,8 @@ def print_rate(value, rate, base, currency):
 
 def print_help(cmd):
     print(
-        "Example: '" + cmd + " 20 USD BRL'\n" +\
-        "This converts 20 US dollars to Brazilian reals\n\n" +\
+        "Example: '" + cmd + " 20 USD BRL'\n" +
+        "This converts 20 US dollars to Brazilian reals\n\n" +
         "Type '" + cmd + " -l' to get all available currencies")
 
 def print_currencies():

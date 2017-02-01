@@ -1,8 +1,8 @@
-Converts currency using [fixer.io](http://fixer.io/) API
+Converts currencies using [fixer.io](http://fixer.io/) API
 
 Installing:
 ```
-> git clone git@github.com:matheussilvapb/currency-converter.git
+> git clone https://github.com/matheussilvapb/currency-converter.git
 > cd currency-converter
 > chmod +x convert.py
 ```

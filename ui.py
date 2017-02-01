@@ -33,9 +33,9 @@ currencies = {
     "ZAR": "South African rand"
 }
 
-def print_rate(value, rate, base, currency):
+def print_rate(value, rate, base, target):
     print(str(value) + " " + currencies[base] + " = " + str(rate*value) + " " +
-            currencies[currency])
+            currencies[target])
 
 def print_help(cmd):
     print(

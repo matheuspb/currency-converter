@@ -18,7 +18,7 @@ if __name__ == "__main__":
             except KeyError:
                 print("Currency not available, type '" + argv[0] + " -l'\nto "\
                         + "get a list of the available currencies")
-            except RuntimeError as e:
+            except RuntimeError:
                 print("Some network problem occurred")
             else:
                 print_rate(float(argv[1]), rate, argv[2], argv[3])
